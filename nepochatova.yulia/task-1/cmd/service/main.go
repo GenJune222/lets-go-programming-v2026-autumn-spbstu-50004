@@ -28,7 +28,6 @@ func main() {
 	}
 
 	switch operation {
-
 	case "+":
 		fmt.Println(a + b)
 
@@ -42,10 +41,8 @@ func main() {
 		if b == 0 {
 			fmt.Println("Division by zero")
 			return
-		} else {
-			fmt.Println(float64(a) / float64(b))
-			return
 		}
+		fmt.Println(float64(a) / float64(b))
 
 	default:
 		fmt.Println("Invalid operation")
