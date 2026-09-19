@@ -6,24 +6,21 @@ func main() {
 	var a, b int
 	var operation string
 
-	fmt.Print("Enter first number ")
 	_, err := fmt.Scan(&a)
 	if err != nil {
-		fmt.Println("Invalid input")
+		fmt.Println("Invalid first operand")
 		return
 	}
 
-	fmt.Print("Enter operation ")
 	_, err = fmt.Scan(&operation)
 	if err != nil {
 		fmt.Println("Invalid operation")
 		return
 	}
 
-	fmt.Print("Enter second number ")
 	_, err = fmt.Scan(&b)
 	if err != nil {
-		fmt.Println("Invalid output")
+		fmt.Println("Invalid second operand")
 		return
 	}
 
