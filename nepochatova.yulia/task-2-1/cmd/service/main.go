@@ -30,6 +30,7 @@ func (c *departmentConditioner) findOptimalTemperature() (int, bool) {
 	if c.lowerBound > c.upperBound {
 		return 0, false
 	}
+
 	return c.lowerBound, true
 }
 
@@ -37,6 +38,7 @@ func main() {
 	var departmentsCount int
 	if _, err := fmt.Scan(&departmentsCount); err != nil {
 		fmt.Println("Invalid departments count")
+
 		return
 	}
 
@@ -44,6 +46,7 @@ func main() {
 		var employeesCount int
 		if _, err := fmt.Scan(&employeesCount); err != nil {
 			fmt.Println("Invalid employees count")
+
 			return
 		}
 
@@ -57,6 +60,7 @@ func main() {
 
 			if _, err := fmt.Scan(&condition, &temperature); err != nil {
 				fmt.Println("Invalid temperature")
+
 				return
 			}
 
