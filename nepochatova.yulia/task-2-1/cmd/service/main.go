@@ -37,16 +37,16 @@ func (c *departmentConditioner) findOptimalTemperature() (int, bool) {
 func main() {
 	var departmentsCount int
 	if _, err := fmt.Scan(&departmentsCount); err != nil {
-		fmt.Println("Invalid departments count")
-
+		err = fmt.Errorf("invalid departments count: %w", err)
+		fmt.Println(err)
 		return
 	}
 
 	for range departmentsCount {
 		var employeesCount int
 		if _, err := fmt.Scan(&employeesCount); err != nil {
-			fmt.Println("Invalid employees count")
-
+			err = fmt.Errorf("invalid employees count: %w", err)
+			fmt.Println(err)
 			return
 		}
 
@@ -59,8 +59,8 @@ func main() {
 			)
 
 			if _, err := fmt.Scan(&condition, &temperature); err != nil {
-				fmt.Println("Invalid temperature")
-
+				err = fmt.Errorf("invalid temperature: %w", err)
+				fmt.Println(err)
 				return
 			}
 
