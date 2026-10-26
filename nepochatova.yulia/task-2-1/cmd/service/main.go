@@ -39,6 +39,7 @@ func main() {
 	if _, err := fmt.Scan(&departmentsCount); err != nil {
 		err = fmt.Errorf("invalid departments count: %w", err)
 		fmt.Println(err)
+
 		return
 	}
 
@@ -47,6 +48,7 @@ func main() {
 		if _, err := fmt.Scan(&employeesCount); err != nil {
 			err = fmt.Errorf("invalid employees count: %w", err)
 			fmt.Println(err)
+
 			return
 		}
 
@@ -61,6 +63,7 @@ func main() {
 			if _, err := fmt.Scan(&condition, &temperature); err != nil {
 				err = fmt.Errorf("invalid temperature: %w", err)
 				fmt.Println(err)
+
 				return
 			}
 
